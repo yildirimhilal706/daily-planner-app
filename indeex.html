@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Planner - Todo List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="stars-background"></div>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">DAILY PLANNER</h1>
+      <div class="star-header-icon">⭐</div>
+    </header>
+
+    <div class="date-goals-section">
+      <div class="input-group">
+        <label for="date">Tarih:</label>
+        <input type="date" id="date" class="date-input">
+      </div>
+      <div class="input-group">
+        <label for="goals">Hedefler:</label>
+        <textarea id="goals" class="goals-input" placeholder="Bugünkü hedeflerinizi yazın..."></textarea>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="left-column">
+        <div class="box top-priorities">
+          <h3>Öncelikler</h3>
+          <div class="priority-list">
+            <div class="priority-item"><input type="text" placeholder="1. öncelik" class="priority-input"></div>
+            <div class="priority-item"><input type="text" placeholder="2. öncelik" class="priority-input"></div>
+            <div class="priority-item"><input type="text" placeholder="3. öncelik" class="priority-input"></div>
+          </div>
+        </div>
+
+        <div class="box important">
+          <h3>Önemli</h3>
+          <div class="important-content">
+            <div class="star-icon">⭐💡</div>
+            <div class="site-link">
+              <a href="#" class="site-button"><i class="fas fa-arrow-left"></i> Siteye Git</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="box todo-list">
+          <h3>Yapılacaklar Listesi</h3>
+          <div class="todo-input-section">
+            <input type="text" id="todoInput" placeholder="Yeni görev ekleyin..." class="todo-input">
+            <button id="addTodo" class="add-btn"><i class="fas fa-plus"></i></button>
+          </div>
+          <ul id="todoList" class="todo-items"></ul>
+          <div class="stars-decoration"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div>
+        </div>
+
+        <div class="box notes">
+          <h3>Notlar</h3>
+          <div class="notes-content">
+            <textarea id="notes" placeholder="Notlarınızı buraya yazın..." class="notes-input"></textarea>
+            <button class="discover-btn"><i class="fas fa-search"></i> Keşfet</button>
+            <button class="expand-btn"><i class="fas fa-expand-arrows-alt"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
